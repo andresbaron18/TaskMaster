@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logonew.png">
+    <title>TaskMaster - Create Project</title>
+</head>
+<body class="dashboard-body">
+    <!-- Modal Overlay -->
+    <div id="overlay" class="modal-overlay show">
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Create New Project</h2>
+                    <button id="closeModal" class="modal-close">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <form class="modal-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Project Name *</label>
+                            <input id="projectName" type="text" class="form-input" placeholder="Enter project name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea id="projectDescription" class="form-textarea" placeholder="Enter project description" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Start Date</label>
+                            <input id="projectStartDate" type="date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Due Date</label>
+                            <input id="projectEndDate" type="date" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Budget</label>
+                            <input id="projectBudget" type="number" class="form-input" placeholder="Enter budget amount" min="0" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Assigned To</label>
+                            <input id="projectAssignee" type="text" class="form-input" placeholder="Assign to team member">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Priority</label>
+                            <select id="projectPriority" class="form-select">
+                                <option value="Low">Low</option>
+                                <option value="Medium" selected>Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Status</label>
+                            <select id="projectStatus" class="form-select">
+                                <option value="Planning">Planning</option>
+                                <option value="Active" selected>Active</option>
+                                <option value="On Hold">On Hold</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" id="cancelProject" class="btn-secondary">Cancel</button>
+                        <button type="button" id="createProject" class="btn-primary">Create Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="moduleProject.js"></script>
+</body>
+</html>
